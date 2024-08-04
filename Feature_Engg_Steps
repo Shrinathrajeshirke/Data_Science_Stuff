@@ -1,0 +1,17 @@
+Step 1 -- EDA
+    1. Numerical features 
+    2. categorical features
+    3. missing values
+    4. outliers
+    5. cleaning
+    
+Step 2 -- Handlng the missing values
+
+Step 3 -- Handling imbalanced data set
+
+Step 4 -- Treating the outliers
+
+Step 5 -- Scaling the data
+
+Step 6 -- Converting categorical features into numerical features
+

@@ -1,0 +1,115 @@
+All Automated EDA libraries At one place
+
+1. D Tale
+
+pip install dtale
+import seaborn as sns
+df=sns.load_dataset('titanic')
+
+import dtale
+dtale.show(df)
+
+
+2. Pandas profiling
+
+pip install pandas_profiling
+df1=sns.load_dataset('tips')
+
+from pandas_profiling import ProfileReport
+profile=ProfileReport(df1,explorative=True)
+profile.to_widgets()
+profile.to_file('output.html')
+
+
+3. sweetviz
+
+pip install sweetviz
+
+import sweetviz as sv
+report = sv.analyze(df)
+report.show_html('sweet_report.html')
+
+
+4. Pandas Visual analysis
+
+pip install pandas_visual_analysis
+
+import seaborn as sns
+print(sns.get_dataset_names())
+
+df = sns.load_dataset('iris')
+
+from pandas_visual_analysis import VisualAnalysis
+
+VisualAnalysis(df) 
+
+
+5. dataprep
+
+pip install dataprep
+
+from dataprep.datasets import load_dataset
+from dataprep.eda import create_report
+df = load_dataset('titanic')
+create_report(df)
+
+
+6. Lux
+
+pip install lux
+
+import pandas as pd
+import lux 
+
+#collecting basic usage statistics for Lux
+lux.logger = True #Remove this line if you do not want your interactions record
+
+df = pd.read_csv('filename')
+df
+
+Click on toggle Pandas/Lux
+
+## if you want analysis with respect to your output/dependent feature then use --
+df.intent = ["Attrition"]
+df
+
+
+7. klib
+
+pip install klib
+
+import seaborn as sns
+df = sns.load_dataset('titanic')
+
+import klib
+
+#klib.describe function for visualizing datasets
+
+klib.cat_plot(df) # returns a visualization of the number & frequency of        categorical features
+
+klib.corr_mat(df) # returns a color-encoded corr matrix
+
+klib.corr_plot(df) # returns a color-encoded heatmap, ideal for corr
+
+klib.dist_plot(df) # returns a distribution plot for every numeric feature
+
+klib.missingval_plot(df) # returns a figure containing info about missing values
+
+
+#klib.clean functions for cleaning datasets 
+
+klib.data_cleaning(df) # performs data cleaning
+
+klib.clean_column_names(df) # cleans and standardizes column names, also called inside data cleaning
+
+klib.convert_datatypes(df) # converts exisisting to more efficient dtypes, also called inside data_cleaning()
+
+klib.drop_missing(df) # drops missing values
+
+klib.mv_col_handling(df) # pools subset of cols based on duplicate with min. loss of information
+
+
+
+
+
+
